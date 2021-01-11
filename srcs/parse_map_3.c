@@ -6,7 +6,7 @@
 /*   By: sonheewon <sonheewon@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/07 20:53:17 by sonheewon         #+#    #+#             */
-/*   Updated: 2021/01/11 16:15:03 by sonheewon        ###   ########.fr       */
+/*   Updated: 2021/01/11 19:17:53 by sonheewon        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int		max_cont_size(t_list *lst)
 	max = 0;
 	while (lst)
 	{
-		if (ft_strlen((char *)lst->content) > max)
+		if ((int)ft_strlen((char *)lst->content) > max)
 			max = ft_strlen((char *)lst->content);
 		lst = lst->next;
 	}
@@ -41,7 +41,7 @@ int		make_map_init(t_game *game, t_list *lst)
 		if (!(game->map[i] = (char *)malloc(sizeof(char) * (game->map_w + 1))))
 			return (ft_malloc_error(game));
 		j = -1;
-		while (j++ < ft_strlen(lst->content) - 1)
+		while (j++ < (int)ft_strlen(lst->content) - 1)
 			game->map[i][j] = 0;
 		while (j++ < game->map_w - 1)
 			game->map[i][j] = ' ';

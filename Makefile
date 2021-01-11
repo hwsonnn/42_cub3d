@@ -3,7 +3,7 @@
 NAME = cub3D
 
 CC = gcc
-CFLAGS = #-Wall -Wextra -Werror #-g3 -fsanitize=address
+CFLAGS = -Wall -Wextra -Werror
 LIBS_FLAGS = -Lmlx -lmlx -framework OpenGL -framework Appkit\
 			-Llibft -lft -Lft_printf -lftprintf
 INCLUDE = -I./includes -I./libft -I./mlx -I./ft_printf/include

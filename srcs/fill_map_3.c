@@ -6,7 +6,7 @@
 /*   By: sonheewon <sonheewon@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/07 20:52:11 by sonheewon         #+#    #+#             */
-/*   Updated: 2021/01/11 16:14:18 by sonheewon        ###   ########.fr       */
+/*   Updated: 2021/01/11 18:17:25 by sonheewon        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,7 @@ int		fill_map(t_game *game, t_list *lst)
 	{
 		j = 0;
 		map_line = (char *)lst->content;
-		while (j < ft_strlen(map_line))
+		while (j < (int)ft_strlen(map_line))
 		{
 			if (is_map_val(map_line[j]) == -1)
 				return (ft_map_error(game));

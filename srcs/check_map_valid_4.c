@@ -6,7 +6,7 @@
 /*   By: sonheewon <sonheewon@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/21 13:12:36 by hson              #+#    #+#             */
-/*   Updated: 2021/01/11 16:08:42 by sonheewon        ###   ########.fr       */
+/*   Updated: 2021/01/11 19:17:04 by sonheewon        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,7 @@ int		chk_map_valid(t_game *game)
 	if (!chk_map_top(game))
 		return (ft_map_error(game));
 	i = 0;
-	while (i < game->map_h - 1)
+	while (i < game->map_h)
 	{
 		if (!chk_map_left(game, i, 0))
 			return (ft_map_error(game));
@@ -73,7 +73,7 @@ int		chk_map_valid(t_game *game)
 			return (ft_map_error(game));
 		i++;
 	}
-	if (!chk_map_bottom(game, i))
+	if (!chk_map_bottom(game, i - 1))
 		return (ft_map_error(game));
 	return (1);
 }
