@@ -6,7 +6,7 @@
 /*   By: sonheewon <sonheewon@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/07 20:53:17 by sonheewon         #+#    #+#             */
-/*   Updated: 2021/01/11 19:17:53 by sonheewon        ###   ########.fr       */
+/*   Updated: 2021/01/13 15:38:22 by sonheewon        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,7 @@ int		make_map_init(t_game *game, t_list *lst)
 		j = -1;
 		while (j++ < (int)ft_strlen(lst->content) - 1)
 			game->map[i][j] = 0;
+		j--;
 		while (j++ < game->map_w - 1)
 			game->map[i][j] = ' ';
 		game->map[i][game->map_w] = '\0';
